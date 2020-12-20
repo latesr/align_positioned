@@ -88,41 +88,25 @@ class Demo extends StatelessWidget {
                       alignment: Alignment(-1, 1),
                       touch: Touch.middle,
                     )
-
                   ],
                 ),
               ),
               //
               SizedBox(height: 50, width: double.infinity),
               //
-              Container(
-                  width: 150,
-                  height: 150,
-                  color: Colors.yellow,
-                  child: Stack(children: circlesInside())),
+              Container(width: 150, height: 150, color: Colors.yellow, child: Stack(children: circlesInside())),
               //
               SizedBox(height: 50, width: double.infinity),
               //
-              Container(
-                  width: 150,
-                  height: 150,
-                  color: Colors.yellow,
-                  child: Stack(children: circlesOutside())),
+              Container(width: 150, height: 150, color: Colors.yellow, child: Stack(children: circlesOutside())),
               //
               SizedBox(height: 60),
               //
-              Container(
-                  width: 150,
-                  height: 150,
-                  color: Colors.yellow,
-                  child: Stack(children: circlesWithOffset())),
+              Container(width: 150, height: 150, color: Colors.yellow, child: Stack(children: circlesWithOffset())),
               SizedBox(height: 100),
               //
               Container(
-                  width: 150,
-                  height: 150,
-                  color: Colors.yellow,
-                  child: Stack(children: circlesWithNamedAlignments())),
+                  width: 150, height: 150, color: Colors.yellow, child: Stack(children: circlesWithNamedAlignments())),
               //
               SizedBox(height: 50),
               //
@@ -266,8 +250,7 @@ class Demo extends StatelessWidget {
                       AlignPositioned(
                         alignment: Alignment.bottomLeft,
                         rotateDegrees: i,
-                        child: Container(
-                            color: Colors.black.withOpacity(i / 360 * .8), width: 100, height: 10),
+                        child: Container(color: Colors.black.withOpacity(i / 360 * .8), width: 100, height: 10),
                       )
                   ],
                 ),
@@ -397,65 +380,41 @@ class Demo extends StatelessWidget {
 
   List<Widget> circlesWithDWidthAndDHeightInside() {
     var children1 = <Widget>[];
-    children1.addAll(
-        circles(Colors.red, Touch.inside, 0, -1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.inside, 0, -1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.green, Touch.inside, 0, -1, moveByChildWidth: -1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.red, Touch.inside, 0, -1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.inside, 0, -1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.green, Touch.inside, 0, -1, moveByChildWidth: -1.0, moveByChildHeight: 0.0));
 
-    children1.addAll(
-        circles(Colors.red, Touch.inside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.inside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
-    children1.addAll(
-        circles(Colors.green, Touch.inside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: -1.0));
+    children1.addAll(circles(Colors.red, Touch.inside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.inside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
+    children1.addAll(circles(Colors.green, Touch.inside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: -1.0));
 
-    children1.addAll(
-        circles(Colors.red, Touch.inside, 0, 1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.inside, 0, 1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.green, Touch.inside, 0, 1, moveByChildWidth: -1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.red, Touch.inside, 0, 1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.inside, 0, 1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.green, Touch.inside, 0, 1, moveByChildWidth: -1.0, moveByChildHeight: 0.0));
 
-    children1.addAll(
-        circles(Colors.red, Touch.inside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.inside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
-    children1.addAll(
-        circles(Colors.green, Touch.inside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: -1.0));
+    children1.addAll(circles(Colors.red, Touch.inside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.inside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
+    children1.addAll(circles(Colors.green, Touch.inside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: -1.0));
     return children1;
   }
 
   List<Widget> circlesWithDWidthAndDHeightOutside() {
     var children1 = <Widget>[];
-    children1.addAll(
-        circles(Colors.red, Touch.outside, 0, -1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.outside, 0, -1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
-    children1.addAll(circles(Colors.green, Touch.outside, 0, -1,
-        moveByChildWidth: -1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.red, Touch.outside, 0, -1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.outside, 0, -1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.green, Touch.outside, 0, -1, moveByChildWidth: -1.0, moveByChildHeight: 0.0));
 
-    children1.addAll(
-        circles(Colors.red, Touch.outside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.outside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
-    children1.addAll(
-        circles(Colors.green, Touch.outside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: -1.0));
+    children1.addAll(circles(Colors.red, Touch.outside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.outside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
+    children1.addAll(circles(Colors.green, Touch.outside, 1, 0, moveByChildWidth: 0.0, moveByChildHeight: -1.0));
 
-    children1.addAll(
-        circles(Colors.red, Touch.outside, 0, 1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.outside, 0, 1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.green, Touch.outside, 0, 1, moveByChildWidth: -1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.red, Touch.outside, 0, 1, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.outside, 0, 1, moveByChildWidth: 1.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.green, Touch.outside, 0, 1, moveByChildWidth: -1.0, moveByChildHeight: 0.0));
 
-    children1.addAll(
-        circles(Colors.red, Touch.outside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
-    children1.addAll(
-        circles(Colors.blue, Touch.outside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
-    children1.addAll(circles(Colors.green, Touch.outside, -1, 0,
-        moveByChildWidth: 0.0, moveByChildHeight: -1.0));
+    children1.addAll(circles(Colors.red, Touch.outside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 0.0));
+    children1.addAll(circles(Colors.blue, Touch.outside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: 1.0));
+    children1.addAll(circles(Colors.green, Touch.outside, -1, 0, moveByChildWidth: 0.0, moveByChildHeight: -1.0));
     return children1;
   }
 
@@ -504,61 +463,42 @@ class Demo extends StatelessWidget {
     Touch touch,
     int dirX,
     int dirY, {
-    double dx,
-    double dy,
-    double moveByChildWidth,
-    double moveByChildHeight,
+    double dx = 0.0,
+    double dy = 0.0,
+    double moveByChildWidth = 0.0,
+    double moveByChildHeight = 0.0,
   }) {
     return <Widget>[
       for (double i = 0.0; i <= 1.0; i += 0.1)
-        alignPositionedCircle(
-            i, color, dirX, dirY, touch, dx, dy, moveByChildWidth, moveByChildHeight),
+        alignPositionedCircle(i, color, dirX, dirY, touch, dx, dy, moveByChildWidth, moveByChildHeight),
     ];
   }
 
   List<Widget> circlesWithNamedAlignments() {
     return <Widget>[
-      AlignPositioned(
-          child: circle(Colors.orange), alignment: Alignment.center, touch: Touch.inside),
-      AlignPositioned(
-          child: circle(Colors.orange), alignment: Alignment.center, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.orange), alignment: Alignment.center, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.orange), alignment: Alignment.center, touch: Touch.outside),
 
       //
-      AlignPositioned(
-          child: circle(Colors.green), alignment: Alignment.centerRight, touch: Touch.inside),
-      AlignPositioned(
-          child: circle(Colors.green), alignment: Alignment.bottomCenter, touch: Touch.inside),
-      AlignPositioned(
-          child: circle(Colors.green), alignment: Alignment.centerLeft, touch: Touch.inside),
-      AlignPositioned(
-          child: circle(Colors.green), alignment: Alignment.topCenter, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.green), alignment: Alignment.centerRight, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.green), alignment: Alignment.bottomCenter, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.green), alignment: Alignment.centerLeft, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.green), alignment: Alignment.topCenter, touch: Touch.inside),
       //
-      AlignPositioned(
-          child: circle(Colors.blue), alignment: Alignment.topRight, touch: Touch.inside),
-      AlignPositioned(
-          child: circle(Colors.blue), alignment: Alignment.bottomRight, touch: Touch.inside),
-      AlignPositioned(
-          child: circle(Colors.blue), alignment: Alignment.topLeft, touch: Touch.inside),
-      AlignPositioned(
-          child: circle(Colors.blue), alignment: Alignment.bottomLeft, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.blue), alignment: Alignment.topRight, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.blue), alignment: Alignment.bottomRight, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.blue), alignment: Alignment.topLeft, touch: Touch.inside),
+      AlignPositioned(child: circle(Colors.blue), alignment: Alignment.bottomLeft, touch: Touch.inside),
       //
-      AlignPositioned(
-          child: circle(Colors.red), alignment: Alignment.centerRight, touch: Touch.outside),
-      AlignPositioned(
-          child: circle(Colors.red), alignment: Alignment.bottomCenter, touch: Touch.outside),
-      AlignPositioned(
-          child: circle(Colors.red), alignment: Alignment.centerLeft, touch: Touch.outside),
-      AlignPositioned(
-          child: circle(Colors.red), alignment: Alignment.topCenter, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.red), alignment: Alignment.centerRight, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.red), alignment: Alignment.bottomCenter, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.red), alignment: Alignment.centerLeft, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.red), alignment: Alignment.topCenter, touch: Touch.outside),
       //
-      AlignPositioned(
-          child: circle(Colors.purple), alignment: Alignment.topRight, touch: Touch.outside),
-      AlignPositioned(
-          child: circle(Colors.purple), alignment: Alignment.bottomRight, touch: Touch.outside),
-      AlignPositioned(
-          child: circle(Colors.purple), alignment: Alignment.topLeft, touch: Touch.outside),
-      AlignPositioned(
-          child: circle(Colors.purple), alignment: Alignment.bottomLeft, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.purple), alignment: Alignment.topRight, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.purple), alignment: Alignment.bottomRight, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.purple), alignment: Alignment.topLeft, touch: Touch.outside),
+      AlignPositioned(child: circle(Colors.purple), alignment: Alignment.bottomLeft, touch: Touch.outside),
     ];
   }
 

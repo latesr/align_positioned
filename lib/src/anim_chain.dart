@@ -61,9 +61,9 @@ class AnimChain extends StatefulWidget {
   final List<Duration> durations;
 
   AnimChain({
-    Key key,
-    this.repeat,
-    this.initialDelay,
+    Key? key,
+    required this.repeat,
+    this.initialDelay = Duration.zero,
   })  : widgets = [],
         durations = [],
         super(key: key);
@@ -71,12 +71,9 @@ class AnimChain extends StatefulWidget {
   /// Define the next [widget] in the chain. The [wait] parameter specifies for
   /// how long it should be displayed.
   AnimChain next({
-    Widget widget,
-    Duration wait,
+    required Widget widget,
+    required Duration wait,
   }) {
-    assert(widget != null);
-    assert(wait != null);
-
     widgets.add(widget);
     durations.add(wait);
     return this;
@@ -89,29 +86,24 @@ class AnimChain extends StatefulWidget {
 // ////////////////////////////////////////////////////////////////////////////
 
 class _AnimChainState extends State<AnimChain> {
-  int count;
-  bool applyInitialDelay;
+  int count = 0;
+  bool applyInitialDelay = true;
 
   @override
   void initState() {
     super.initState();
-    count = 0;
-    applyInitialDelay = true;
     _next();
   }
 
   void _next() {
     var duration = widget.durations[count];
 
-    if (applyInitialDelay && widget.initialDelay != null) {
+    if (applyInitialDelay) {
       applyInitialDelay = false;
       duration += widget.initialDelay;
     }
 
-    if (duration == null)
-      WidgetsBinding.instance.addPostFrameCallback((_) => _nextCount());
-    else
-      Timer(duration, _nextCount);
+    Timer(duration, _nextCount);
   }
 
   void _nextCount() {
